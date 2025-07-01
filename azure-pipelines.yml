@@ -44,7 +44,7 @@ stages:
     - script: |
         ./endorctl scan \
           --upload \
-          --namespace "<your-endor-namespace>" \
+          --namespace "shruti-learn" \
           --project-name "$(Build.Repository.Name)" \
           --source-path "." \
           --build-cmd "npm run build"
@@ -63,7 +63,7 @@ stages:
     - script: |
         ./endorctl scan \
           --upload \
-          --namespace "<your-endor-namespace>" \
+          --namespace "shruti-learn" \
           --project-name "$(Build.Repository.Name)" \
           --container "$(imageName):$(tag)"
       displayName: 'Run Endor Labs Container Image Scan'
